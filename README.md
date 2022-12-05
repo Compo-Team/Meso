@@ -16,11 +16,31 @@ Working on distributed computing.
 
 For any question, sponsership, support, email amirmohammadfarhang83@gmail.com.
 
+## How to use it?
+
+First include/require the MESO and BASE file (composer with be available soon) then initiate it as below:
+```
+$Meso = new Meso(Address, User, Password, Database);
+if(!$Meso->connect())
+{
+    print_r("Error: Service can not initialize \n reason: Database Connection Error");
+    exit;
+}
+```
+after that you can use it like :
+```
+$res = $this->Meso->readOne("users", $obj);
+```
+Meso->delete("registered", $obj)
+```
+Meso->query("UPDATE `users` SET `Password` = '$user->password' WHERE `username` = '$user->esername'")
+```
+the full documention will be avialable soon.
 
 ## Tech Stack
 
-Only PHP nothing more, test on centos, ubuntu php 7.4.
+Only PHP nothing more, tested on centos, ubuntu, windows (php 7.4).
 
 # Status ⚒️
 
-still working ...
+still working to make it better.
