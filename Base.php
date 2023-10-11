@@ -6,13 +6,13 @@ require("log_handler.php");
 class Base
 {
     public $servername;
-    public $username;
-    public $password;
-    public $dbname;
-    public $connection;
-    public  $settings;
+	public $username;
+	public $password;
+	public $dbname;
+	public $connection;
+	public  $settings;
 
-    public function connect()
+	public function connect()
     {
         $connection = mysqli_connect($this->servername, $this->username, $this->password, $this->dbname);
         if(mysqli_connect_errno())
